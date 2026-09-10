@@ -110,7 +110,7 @@ export default function Home() {
       <main id="main">
         <section className="wrap hero">
           <div className="hero-copy">
-            <span className="eyebrow">● &nbsp; YOUR EVERYDAY, CONNECTED</span>
+            <span className="eyebrow">● &nbsp; EVERYDAY LIFE, MADE SIMPLE</span>
             <h1>
               Life moves.
               <br />
