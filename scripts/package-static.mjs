@@ -19,16 +19,21 @@ function packagePage(source, destination) {
 
 packagePage('dist/client/index.html', 'outputs/github-pages/index.html');
 packagePage('dist/client/privacy.html', 'outputs/github-pages/privacy.html');
+packagePage('dist/client/about.html', 'outputs/github-pages/about.html');
+packagePage('dist/client/contact.html', 'outputs/github-pages/contact.html');
 
 const home = fs.readFileSync('outputs/github-pages/index.html', 'utf8');
 const privacy = fs.readFileSync('outputs/github-pages/privacy.html', 'utf8');
+const about = fs.readFileSync('outputs/github-pages/about.html', 'utf8');
+const contact = fs.readFileSync('outputs/github-pages/contact.html', 'utf8');
 if ((home.match(/class="service-card"/g) || []).length !== 15) throw new Error('Missing service cards');
 if (!privacy.includes('Privacy Policy') || !privacy.includes('Your choices and rights')) {
   throw new Error('Privacy policy missing');
 }
+if (!about.includes('What drives us') || !contact.includes('Contact Ascend Jvian')) throw new Error('Company pages missing');
 
 for (const name of ['lifestyle.png', 'mobility.png', 'lifestyle-discovery.png', 'favicon.svg']) {
   fs.copyFileSync('public/' + name, 'outputs/github-pages/' + name);
 }
 fs.writeFileSync('outputs/github-pages/.nojekyll', '');
-console.log('Static site packaged: homepage, 15 services and privacy policy.');
+console.log('Static site packaged: homepage, company pages, 15 services and privacy policy.');
