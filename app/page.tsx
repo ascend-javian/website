@@ -1,19 +1,291 @@
-import { ArrowUpRight, Wallet, Car, ShoppingBag, Play, Smartphone, Receipt, Package, Ticket, TrendingUp, CircleDollarSign, Radio, CreditCard, BriefcaseBusiness, Gift, Route } from 'lucide-react';
+import {
+  ArrowUpRight,
+  Wallet,
+  Car,
+  ShoppingBag,
+  Play,
+  Smartphone,
+  Receipt,
+  Package,
+  Ticket,
+  TrendingUp,
+  CircleDollarSign,
+  Radio,
+  CreditCard,
+  BriefcaseBusiness,
+  Gift,
+  Route,
+} from 'lucide-react';
 const groups = [
-{ id:'money', title:'Money & payments', tagline:'More ways to manage your everyday.', services:[['E-wallet','Everyday payments, brought into the app.',Wallet],['EWA — Earned Wage Access','Earned wage access within the app.',BriefcaseBusiness],['Micro Loan / Financing','Financing options within the app.',CircleDollarSign],['Buy Now, Pay Later','Consumer instalment payments.',CreditCard],['Utility Bill Payments','A place for your everyday bills.',Receipt],['Wealth Management','Wealth services within the app.',TrendingUp]] },
-{ id:'mobility', title:'On the move', tagline:'For the journey, and everything along it.', services:[['Automotive Services','Parking, roadside assistance, repairs, refuelling, car wash and car-moving QR code.',Car],['Ride-Hailing','An e-hailing aggregator for your journeys.',Route],['Logistics & Courier Services','Delivery services, connected through the app.',Package]] },
-{ id:'lifestyle', title:'Everyday & beyond', tagline:'Stay connected. Find your next favourite.', services:[['Eastel Telco','Telco services in your everyday app.',Smartphone],['The9sen Mall','Flash sales and the cash component of the Points Mall.',ShoppingBag],['Short Drama Series','Short-form stories for your downtime.',Play],['Wetix','Movie ticket purchases through a cinema aggregator.',Ticket],['Online Earnings','Rewarded advertisements you can choose to watch.',Gift],['CPS — Cost Per Sale','Cost per sale services within the app.',Radio]] }
+  {
+    id: 'money',
+    title: 'Money & payments',
+    tagline: 'More ways to manage your everyday.',
+    services: [
+      ['E-wallet', 'Everyday payments, brought into the app.', Wallet],
+      [
+        'EWA — Earned Wage Access',
+        'Earned wage access within the app.',
+        BriefcaseBusiness,
+      ],
+      [
+        'Micro Loan / Financing',
+        'Financing options within the app.',
+        CircleDollarSign,
+      ],
+      ['Buy Now, Pay Later', 'Consumer instalment payments.', CreditCard],
+      ['Utility Bill Payments', 'A place for your everyday bills.', Receipt],
+      ['Wealth Management', 'Wealth services within the app.', TrendingUp],
+    ],
+  },
+  {
+    id: 'mobility',
+    title: 'On the move',
+    tagline: 'For the journey, and everything along it.',
+    services: [
+      [
+        'Automotive Services',
+        'Parking, roadside assistance, repairs, refuelling, car wash and car-moving QR code.',
+        Car,
+      ],
+      ['Ride-Hailing', 'An e-hailing aggregator for your journeys.', Route],
+      [
+        'Logistics & Courier Services',
+        'Delivery services, connected through the app.',
+        Package,
+      ],
+    ],
+  },
+  {
+    id: 'lifestyle',
+    title: 'Everyday & beyond',
+    tagline: 'Stay connected. Find your next favourite.',
+    services: [
+      ['Eastel Telco', 'Telco services in your everyday app.', Smartphone],
+      [
+        'The9sen Mall',
+        'Flash sales and the cash component of the Points Mall.',
+        ShoppingBag,
+      ],
+      ['Short Drama Series', 'Short-form stories for your downtime.', Play],
+      ['Wetix', 'Movie ticket purchases through a cinema aggregator.', Ticket],
+      [
+        'Online Earnings',
+        'Rewarded advertisements you can choose to watch.',
+        Gift,
+      ],
+      ['CPS — Cost Per Sale', 'Cost per sale services within the app.', Radio],
+    ],
+  },
 ] as const;
-export default function Home(){return <>
-<a className="skip" href="#main">Skip to content</a>
-<div className="announcement">A new everyday app is taking shape. <a href="./about.html">Meet Ascend Jvian ↗</a></div>
-<header className="wrap header"><a href="#" className="brand" aria-label="Ascend Jvian home"><span className="mark">aj<span>↗</span></span><span>ascend<b>jvian</b></span></a><nav aria-label="Main navigation"><a href="./" aria-current="page">Home</a><a href="./about.html">About Us</a><a className="nav-cta" href="./contact.html">Contact Us <ArrowUpRight size={18}/></a></nav></header>
-<main id="main"><section className="wrap hero"><div className="hero-copy"><span className="eyebrow">● &nbsp; YOUR EVERYDAY, CONNECTED</span><h1>Life moves.<br/>Move <span>with it.</span></h1><p>Pay, shop, travel and unwind. We’re bringing the services you use every day into one Ascend Jvian app.</p><a className="button" href="#services">Explore our services <ArrowUpRight size={20}/></a><small>App in development</small></div><div className="hero-visual"><img src="./lifestyle.png" alt="A person using their phone at a bright Kuala Lumpur café"/><div className="photo-caption"><span>MORE OF LIFE.<br/><strong>ONE CONNECTION.</strong></span><span>↗</span></div><div className="floating-tag"><Wallet size={28}/><span>Everyday possibilities<strong>All coming together.</strong></span></div></div></section>
-<div className="wrap quick-links">{[{id:'money',name:'Pay & manage',Icon:Wallet},{id:'mobility',name:'Move & deliver',Icon:Car},{id:'lifestyle',name:'Shop & connect',Icon:ShoppingBag},{id:'lifestyle',name:'Watch & enjoy',Icon:Play}].map(({id,name,Icon})=><a href={'#'+id} key={name}><Icon size={24}/><span>{name}</span><ArrowUpRight size={17}/></a>)}</div>
-<section id="services" className="wrap services"><div className="section-heading"><div><span className="eyebrow">THE ASCEND JVIAN ECOSYSTEM</span><h2>A little less switching.<br/>A lot more living.</h2></div><p>Discover the services we’re developing for one connected app experience.</p></div>{groups.map(group=><section className="service-group" id={group.id} key={group.id} aria-labelledby={group.id+'-title'}><div className="group-heading"><h3 id={group.id+'-title'}>{group.title}</h3><p>{group.tagline}</p></div><div className="service-grid">{group.services.map(([name,detail,Icon])=><article className="service-card" key={name}><Icon size={27} strokeWidth={1.6}/><h4>{name}</h4><p>{detail}</p></article>)}</div></section>)}</section>
-<section className="wrap story-grid" aria-label="Ascend Jvian in everyday life"><article className="story-card story-card-wide"><img src="./mobility.png" alt="A modern car travelling through Kuala Lumpur at dusk"/><div className="story-overlay"><span>MOVE WITH CONFIDENCE</span><h3>From every stop<br/>to every start.</h3></div></article><article className="story-card"><img src="./lifestyle-discovery.png" alt="A shopper using a smartphone in a modern entertainment mall"/><div className="story-overlay"><span>YOUR TIME, YOUR WAY</span><h3>Shop, watch and<br/>discover more.</h3></div></article></section>
-<section id="vision" className="vision"><div className="wrap vision-inner"><div><span className="eyebrow">BUILT AROUND YOUR DAY</span><h2>Many possibilities.<br/><span>One destination.</span></h2></div><div><p>From your morning commute to your next movie night, Ascend Jvian is being developed to bring everyday services closer together.</p><a href="#services">Discover the ecosystem &nbsp; →</a></div></div></section>
-</main>
-<nav className="legal-nav" aria-label="Company policies"><div className="wrap"><a href="./privacy.html">Privacy Policy</a><a href="./whistleblowing.html">Whistleblowing Policy</a><a href="./anti-bribery.html">Anti-Bribery &amp; Corruption Policy</a></div></nav>
-<footer><div className="wrap footer-top"><a href="#" className="brand"><span className="mark">aj<span>↗</span></span><span>ascend<b>jvian</b></span></a><div className="company-details"><strong>ASCEND JVIAN SDN. BHD.</strong><span>202601020555 (1682652-X)</span></div><div className="footer-links"><a href="./about.html">About Us</a><a href="./contact.html">Contact Us</a><a href="./privacy.html">Privacy Policy</a><a href="#main">Back to top ↑</a></div></div><div className="wrap footer-bottom"><span>Copyright ©{new Date().getFullYear()} ASCEND JVIAN SDN. BHD. — Company No. 202601020555 (1682652-X)</span><span>All rights reserved.</span></div></footer></>}
-
+export default function Home() {
+  return (
+    <>
+      <a className="skip" href="#main">
+        Skip to content
+      </a>
+      <div className="announcement">
+        A new everyday app is taking shape.{' '}
+        <a href="./about.html">Meet Ascend Jvian ↗</a>
+      </div>
+      <header className="wrap header">
+        <a href="#" className="brand" aria-label="Ascend Jvian home">
+          <span className="mark">
+            aj<span>↗</span>
+          </span>
+          <span>
+            ascend<b>jvian</b>
+          </span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="./" aria-current="page">
+            Home
+          </a>
+          <a href="./about.html">About Us</a>
+          <a className="nav-cta" href="./contact.html">
+            Contact Us <ArrowUpRight size={18} />
+          </a>
+        </nav>
+      </header>
+      <main id="main">
+        <section className="wrap hero">
+          <div className="hero-copy">
+            <span className="eyebrow">● &nbsp; YOUR EVERYDAY, CONNECTED</span>
+            <h1>
+              Life moves.
+              <br />
+              Move <span>with it.</span>
+            </h1>
+            <p>
+              Pay, shop, travel and unwind. We’re bringing the services you use
+              every day into one Ascend Jvian app.
+            </p>
+            <a className="button" href="#services">
+              Explore our services <ArrowUpRight size={20} />
+            </a>
+            <small>App in development</small>
+          </div>
+          <div className="hero-visual">
+            <img
+              src="./lifestyle.png"
+              alt="A person using their phone at a bright Kuala Lumpur café"
+            />
+            <div className="photo-caption">
+              <span>
+                MORE OF LIFE.
+                <br />
+                <strong>ONE CONNECTION.</strong>
+              </span>
+              <span>↗</span>
+            </div>
+            <div className="floating-tag">
+              <Wallet size={28} />
+              <span>
+                Everyday possibilities<strong>All coming together.</strong>
+              </span>
+            </div>
+          </div>
+        </section>
+        <div className="wrap quick-links">
+          {[
+            { id: 'money', name: 'Pay & manage', Icon: Wallet },
+            { id: 'mobility', name: 'Move & deliver', Icon: Car },
+            { id: 'lifestyle', name: 'Shop & connect', Icon: ShoppingBag },
+            { id: 'lifestyle', name: 'Watch & enjoy', Icon: Play },
+          ].map(({ id, name, Icon }) => (
+            <a href={'#' + id} key={name}>
+              <Icon size={24} />
+              <span>{name}</span>
+              <ArrowUpRight size={17} />
+            </a>
+          ))}
+        </div>
+        <section id="services" className="wrap services">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">THE ASCEND JVIAN ECOSYSTEM</span>
+              <h2 className="typing-loop" aria-label="A little less switching. A lot more living.">
+                <span aria-hidden="true">A little less switching.</span>
+                <span aria-hidden="true">A lot more living.</span>
+              </h2>
+            </div>
+            <p>
+              Discover the services we’re developing for one connected app
+              experience.
+            </p>
+          </div>
+          {groups.map((group) => (
+            <section
+              className="service-group"
+              id={group.id}
+              key={group.id}
+              aria-labelledby={group.id + '-title'}
+            >
+              <div className="group-heading">
+                <h3 id={group.id + '-title'}>{group.title}</h3>
+                <p>{group.tagline}</p>
+              </div>
+              <div className="service-grid">
+                {group.services.map(([name, detail, Icon]) => (
+                  <article className="service-card" key={name}>
+                    <Icon size={27} strokeWidth={1.6} />
+                    <h4>{name}</h4>
+                    <p>{detail}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </section>
+        <section
+          className="wrap story-grid"
+          aria-label="Ascend Jvian in everyday life"
+        >
+          <article className="story-card story-card-wide">
+            <img
+              src="./mobility.png"
+              alt="A modern car travelling through Kuala Lumpur at dusk"
+            />
+            <div className="story-overlay">
+              <span>MOVE WITH CONFIDENCE</span>
+              <h3>
+                From every stop
+                <br />
+                to every start.
+              </h3>
+            </div>
+          </article>
+          <article className="story-card">
+            <img
+              src="./lifestyle-discovery.png"
+              alt="A shopper using a smartphone in a modern entertainment mall"
+            />
+            <div className="story-overlay">
+              <span>YOUR TIME, YOUR WAY</span>
+              <h3>
+                Shop, watch and
+                <br />
+                discover more.
+              </h3>
+            </div>
+          </article>
+        </section>
+        <section id="vision" className="vision">
+          <div className="wrap vision-inner">
+            <div>
+              <span className="eyebrow">BUILT AROUND YOUR DAY</span>
+              <h2>
+                Many possibilities.
+                <br />
+                <span>One destination.</span>
+              </h2>
+            </div>
+            <div>
+              <p>
+                From your morning commute to your next movie night, Ascend Jvian
+                is being developed to bring everyday services closer together.
+              </p>
+              <a href="#services">Discover the ecosystem &nbsp; →</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <nav className="legal-nav" aria-label="Company policies">
+        <div className="wrap">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./whistleblowing.html">Whistleblowing Policy</a>
+          <a href="./anti-bribery.html">Anti-Bribery &amp; Corruption Policy</a>
+        </div>
+      </nav>
+      <footer>
+        <div className="wrap footer-top">
+          <a href="#" className="brand">
+            <span className="mark">
+              aj<span>↗</span>
+            </span>
+            <span>
+              ascend<b>jvian</b>
+            </span>
+          </a>
+          <div className="company-details">
+            <strong>ASCEND JVIAN SDN. BHD.</strong>
+            <span>202601020555 (1682652-X)</span>
+          </div>
+          <div className="footer-links">
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="#main">Back to top ↑</a>
+          </div>
+        </div>
+        <div className="wrap footer-bottom">
+          <span>
+            Copyright ©{new Date().getFullYear()} ASCEND JVIAN SDN. BHD. —
+            Company No. 202601020555 (1682652-X)
+          </span>
+          <span>All rights reserved.</span>
+        </div>
+      </footer>
+    </>
+  );
+}
