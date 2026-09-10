@@ -41,4 +41,7 @@ for (const name of ['lifestyle.png', 'mobility.png', 'lifestyle-discovery.png', 
   fs.copyFileSync('public/' + name, 'outputs/github-pages/' + name);
 }
 fs.writeFileSync('outputs/github-pages/.nojekyll', '');
+for (const file of ['index.html', 'about.html', 'contact.html', 'privacy.html', 'whistleblowing.html', 'anti-bribery.html', 'favicon.svg', 'lifestyle.png', 'mobility.png', 'lifestyle-discovery.png', '.nojekyll']) {
+  fs.copyFileSync('outputs/github-pages/' + file, file);
+}
 console.log('Static site packaged: homepage, company pages, 15 services and privacy policy.');
