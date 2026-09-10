@@ -24,6 +24,7 @@ h1 span,.header nav a:hover,.quick-links a:hover,.quick-links a>svg:first-child,
 .about{position:relative}.about:after{content:"";position:absolute;width:190px;height:190px;right:0;top:45px;border-radius:50%;background:radial-gradient(circle,#dce7f6,transparent 68%);z-index:-1}
 footer{background:#06162f;color:#fff}.footer-bottom{border-color:#294160;color:#aebed4}.company-details span,.footer-top>p{color:#aebed4}.footer-links a{color:#dce6f5}.policy-shell{background:linear-gradient(180deg,#f8faff,#f3f7fc)}.policy-content p,.policy-content li{color:#455978}
 @media(max-width:650px){.story-grid{grid-template-columns:1fr;padding-bottom:55px}.story-card{height:330px}.story-card-wide{border-bottom-right-radius:65px}.story-overlay{padding:25px}.story-overlay h3{font-size:30px}}
+@media(max-width:650px){.header{height:auto;min-height:87px;padding-block:16px;flex-wrap:wrap;gap:15px}.header nav{width:100%;justify-content:space-between}.header nav .nav-cta{display:flex;padding:9px 13px;gap:7px}.header nav .nav-cta svg{display:none}}
 .contact-grid address{font-style:normal;font-size:17px;line-height:1.65;color:var(--muted)}.contact-grid p strong{color:var(--foreground)}.phone-link{font-size:22px;font-weight:800;color:var(--primary);border-bottom:1px solid #aabbd2}.contact-grid small{font-size:14px}
 @media(prefers-reduced-motion:reduce){.story-card img{transition:none}.story-card:hover img{transform:none}}
 
