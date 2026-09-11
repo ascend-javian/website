@@ -61,7 +61,7 @@ const groups = [
     title: 'Everyday & beyond',
     tagline: 'Stay connected. Find your next favourite.',
     services: [
-      ['Eastel Telco', 'Telco services in your everyday app.', Smartphone],
+      ['Eastel', 'Mobile connectivity services in your everyday app.', Smartphone],
       [
         'The9sen Mall',
         'Flash sales and the cash component of the Points Mall.',
