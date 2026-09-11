@@ -102,6 +102,7 @@ export default function Home() {
             Home
           </a>
           <a href="./about.html">About Us</a>
+          <a href="./support.html">Support</a>
           <a className="nav-cta" href="./contact.html">
             Contact Us <ArrowUpRight size={18} />
           </a>
@@ -164,7 +165,10 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">THE ASCEND JVIAN ECOSYSTEM</span>
-              <h2 className="typing-loop" aria-label="A little less switching. A lot more living.">
+              <h2
+                className="typing-loop"
+                aria-label="A little less switching. A lot more living."
+              >
                 <span aria-hidden="true">A little less switching.</span>
                 <span aria-hidden="true">A lot more living.</span>
               </h2>
@@ -174,6 +178,13 @@ export default function Home() {
               experience.
             </p>
           </div>
+          <aside className="regulatory-note">
+            Financial and regulated services are made available only where
+            permitted and, where applicable, are provided by appropriately
+            licensed or regulated third-party providers. Provider identity,
+            eligibility, terms, fees and availability will be shown before a
+            user applies for or uses a service.
+          </aside>
           {groups.map((group) => (
             <section
               className="service-group"
@@ -252,7 +263,10 @@ export default function Home() {
       </main>
       <nav className="legal-nav" aria-label="Company policies">
         <div className="wrap">
+          <a href="./support.html">App Support</a>
+          <a href="./account-deletion.html">Account &amp; Data Deletion</a>
           <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Use</a>
           <a href="./whistleblowing.html">Whistleblowing Policy</a>
           <a href="./anti-bribery.html">Anti-Bribery &amp; Corruption Policy</a>
         </div>
