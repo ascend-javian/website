@@ -178,14 +178,6 @@ export default function Home() {
               experience.
             </p>
           </div>
-          <aside className="regulatory-note">
-            Financial and regulated services are made available only where
-            permitted and, where applicable, are provided by appropriately
-            licensed or regulated third-party providers, including Anchor
-            Capital Sdn Bhd for applicable financial services. Provider
-            identity, eligibility, terms, fees and availability will be shown
-            before a user applies for or uses a service.
-          </aside>
           {groups.map((group) => (
             <section
               className="service-group"
