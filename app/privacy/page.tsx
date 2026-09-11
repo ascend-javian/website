@@ -87,7 +87,8 @@ const sections = [
         Service providers acting for us must protect personal data and use it
         only for authorised purposes. Regulated services are provided by
         appropriately licensed or regulated third-party providers where
-        applicable, and their privacy notices may also apply.
+        applicable, including Anchor Capital Sdn Bhd for applicable financial
+        services, and their privacy notices may also apply.
       </p>
     </>,
   ],
@@ -154,6 +155,7 @@ const sections = [
       <span>
         No. 3, Jalan Bangsar, KL Eco City, 59200 W.P. Kuala Lumpur, Malaysia
       </span>
+      <a href="mailto:support@ascendjvian.com">support@ascendjvian.com</a>
       <a href="tel:+60388893425">+603-8889 3425</a>
       <span>Monday–Friday, 8.00am–8.00pm</span>
     </div>,

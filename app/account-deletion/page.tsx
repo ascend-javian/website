@@ -27,6 +27,16 @@ export default function AccountDeletion() {
             <h2>How to submit a request</h2>
             <ol>
               <li>
+                Email{' '}
+                <a
+                  className="policy-action"
+                  href="mailto:support@ascendjvian.com"
+                >
+                  support@ascendjvian.com
+                </a>
+                ; or
+              </li>
+              <li>
                 Call{' '}
                 <a className="policy-action" href="tel:+60388893425">
                   +603-8889 3425

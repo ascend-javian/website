@@ -1,5 +1,12 @@
 import type { Metadata } from 'next';
-import { Clock3, HelpCircle, MapPin, Phone, ShieldCheck } from 'lucide-react';
+import {
+  Clock3,
+  HelpCircle,
+  Mail,
+  MapPin,
+  Phone,
+  ShieldCheck,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'App Support | Ascend Jvian',
@@ -72,6 +79,15 @@ export default function Support() {
               No. 3, Jalan Bangsar, KL Eco City, 59200 W.P. Kuala Lumpur,
               Malaysia
             </address>
+          </article>
+          <article>
+            <Mail size={25} />
+            <h2>Email support</h2>
+            <p>
+              <a className="email-link" href="mailto:support@ascendjvian.com">
+                support@ascendjvian.com
+              </a>
+            </p>
           </article>
         </section>
         <section className="wrap faq-section">

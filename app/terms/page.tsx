@@ -36,9 +36,10 @@ const sections = [
     <p>
       Where applicable, e-wallet, financing, instalment, earned wage access,
       wealth or other regulated services are provided by appropriately licensed
-      or regulated third-party providers. The provider identity, eligibility
-      rules, fees and applicable terms will be shown before you apply for or use
-      the service. Ascend Jvian does not guarantee approval, returns or
+      or regulated third-party providers, including Anchor Capital Sdn Bhd for
+      applicable financial services. The provider identity, eligibility rules,
+      fees and applicable terms will be shown before you apply for or use the
+      service. Ascend Jvian does not guarantee approval, returns or
       availability.
     </p>,
   ],
