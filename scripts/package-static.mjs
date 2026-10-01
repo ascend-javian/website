@@ -11,7 +11,9 @@ function packagePage(source, destination) {
     )
     .join('\n');
   html = html
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '')
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, (tag) =>
+      /^<script\b[^>]*data-chatwoot-widget/.test(tag) ? tag : '',
+    )
     .replace(/<link\b[^>]*>/g, (tag) =>
       /rel="(?:stylesheet|modulepreload)"/.test(tag) ||
       /as="(?:script|style)"/.test(tag)
@@ -22,7 +24,11 @@ function packagePage(source, destination) {
     '</head>',
     `<style>${styles}</style><link rel="icon" href="./favicon.svg"/></head>`,
   );
-  if (/<script\b/.test(html) || /\/_next\//.test(html))
+  const htmlWithoutChatWidget = html.replace(
+    /<script\b[^>]*data-chatwoot-widget[^>]*>[\s\S]*?<\/script>/,
+    '',
+  );
+  if (/<script\b/.test(htmlWithoutChatWidget) || /\/_next\//.test(html))
     throw new Error('Unexpected runtime asset reference');
   fs.writeFileSync(destination, html);
 }
